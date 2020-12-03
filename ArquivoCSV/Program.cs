@@ -51,10 +51,7 @@ namespace ArquivoCSV
 
             using (StreamWriter writer = new StreamWriter(path, false))
             {
-                foreach (String item in csv)
-                {
-                    writer.WriteLine(item);
-                }
+                csv.ForEach(a => writer.WriteLine(a));
             }
 
             Console.WriteLine("Fim");
